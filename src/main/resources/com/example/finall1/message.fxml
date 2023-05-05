@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="messageContainer" prefHeight="65.0" prefWidth="222.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finall1.controller.MessageLabelController">
+   <Label fx:id="message" prefHeight="3.0" prefWidth="220.0" style="-fx-background-color: #f2f2f2; -fx-padding: 10px;" text="Đây là một label ngắn" textFill="#0b0000" wrapText="true" />
+</VBox>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finall1.controller.MainController">
+   <children>
+      <AnchorPane prefHeight="700.0" prefWidth="60.0" style="-fx-background-color: #262626;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="25.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="btnDashboard" blendMode="SOFT_LIGHT" fitHeight="24.0" fitWidth="24.0" layoutX="25.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/home.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnMessage" fitHeight="24.0" fitWidth="24.0" layoutX="26.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/messenger.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="btnNoti" accessibleRole="BUTTON" blendMode="SOFT_LIGHT" fitHeight="24.0" fitWidth="24.0" layoutX="25.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/notification.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnSetting" blendMode="SOFT_LIGHT" fitHeight="24.0" fitWidth="24.0" layoutX="25.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/settings.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnLogout" blendMode="SOFT_LIGHT" fitHeight="24.0" fitWidth="24.0" layoutX="26.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/logout.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="76.0" prefHeight="700.0" prefWidth="299.0" style="-fx-background-color: #fff;" stylesheets="@css/style.css">
+         <children>
+            <Label layoutX="16.0" layoutY="40.0" text="Messages (1)">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Pane layoutX="16.0" layoutY="96.0" prefHeight="50.0" prefWidth="270.0">
+               <children>
+                  <TextField fx:id="btnSearch" layoutX="1.0" prefHeight="40.0" prefWidth="269.0" promptText="Search ..." style="-fx-text-box-border: none; -fx-background-radius: 15; -fx-background-color: #ecf0f1; -fx-text-focus: none;">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="236.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/search.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="16.0" layoutY="20.0" text="ALL CHATS">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="173.0" text="ALL MESSAGES">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Pane layoutX="14.0" layoutY="195.0" prefHeight="82.0" prefWidth="269.0">
+               <children>
+                  <Label fx:id="lbUsername" layoutX="55.0" layoutY="4.0" text="Tú Cô Đơn">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbMessage" layoutX="55.0" layoutY="33.0" text="I have something to tell you" />
+                  <Label fx:id="lbTime" layoutX="236.0" layoutY="5.0" text="14:11" />
+                  <Label alignment="CENTER" layoutX="249.0" layoutY="34.0" prefHeight="15.0" prefWidth="15.0" style="-fx-background-radius: 90; -fx-background-color: #262626;" text="3" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Circle fx:id="avt" layoutX="24.0" layoutY="29.0" radius="24.0" stroke="BLACK" strokeLineJoin="ROUND">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.43421053886413574" green="0.32967835664749146" blue="0.32967835664749146" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill></Circle>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="imgAvatar" layoutX="375.0" prefHeight="700.0" prefWidth="550.0" style="-fx-background-color: #fff;">
+         <children>
+            <AnchorPane layoutY="-2.0" prefHeight="82.0" prefWidth="550.0" style="-fx-background-color: #fff;">
+               <children>
+                  <Label layoutX="70.0" layoutY="9.0" text="Tú Cô Đơn">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="86.0" layoutY="39.0" prefHeight="22.0" prefWidth="64.0" text="Online">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Circle fx:id="avt2" fill="DODGERBLUE" layoutX="34.0" layoutY="38.0" radius="28.0" stroke="BLACK" strokeLineJoin="ROUND" />
+                  <Circle fill="#27ae60" layoutX="76.0" layoutY="51.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="messageArea" layoutY="80.0" prefHeight="619.0" prefWidth="550.0" style="-fx-background-radius: 30; -fx-background-color: #ecf0f1;" stylesheets="@css/style.css">
+               <children>
+                  <TextField fx:id="messageField" layoutX="14.0" layoutY="556.0" prefHeight="50.0" prefWidth="423.0" promptText="Type something here" style="-fx-text-box-border: none; -fx-background-radius: 15; -fx-background-color: white; -fx-text-focus: none;">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="397.0" layoutY="568.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/confused.png" />
+                     </image></ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="364.0" layoutY="571.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/attach-paperclip-symbol.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="btnSendMsg" layoutX="437.0" layoutY="556.0" onMouseClicked="#sendMessage" prefHeight="49.0" prefWidth="57.0" style="-fx-background-radius: 15; -fx-background-color: #262626;" text="Send" textFill="WHITE" />
+                  <ScrollPane fx:id="a1" layoutY="22.0" prefHeight="529.0" prefWidth="550.0">
+                     <content>
+                        <GridPane fx:id="messageContainer" prefHeight="61.0" prefWidth="541.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints fx:id="sendMessage" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="925.0" prefHeight="700.0" prefWidth="275.0" style="-fx-background-color: #fff;" styleClass="a" stylesheets="@css/style.css">
+         <children>
+            <Circle fx:id="avt3" fill="DODGERBLUE" layoutX="138.0" layoutY="108.0" radius="54.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="96.0" layoutY="173.0" text="Tú Cô Đơn">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="44.0" layoutY="432.0" text="Shared Photo" textFill="#636e72" />
+            <ImageView fitHeight="19.0" fitWidth="20.0" layoutX="20.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/folder.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="7.0" layoutY="213.0" prefHeight="142.0" prefWidth="262.0">
+               <children>
+                  <Pane layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="222.0">
+                     <children>
+                        <Label layoutY="6.0" text="Search In Conversation " textFill="#636e72" />
+                        <ImageView fitHeight="20.0" fitWidth="15.0" layoutX="201.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/search.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="14.0" layoutY="94.0" prefHeight="30.0" prefWidth="222.0">
+                     <children>
+                        <Label layoutY="6.0" text="Change Color" textFill="#636e72" />
+                        <ImageView fitHeight="20.0" fitWidth="15.0" layoutX="201.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/colour.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="14.0" layoutY="54.0" prefHeight="30.0" prefWidth="222.0">
+                     <children>
+                        <Label layoutY="6.0" text="Change Emoji" textFill="#636e72" />
+                        <ImageView fitHeight="20.0" fitWidth="15.0" layoutX="201.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/confused.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="20.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
